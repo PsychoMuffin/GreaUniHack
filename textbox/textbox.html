@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function check()
+{
+var ans="System.out.println(\"Hello World\")";
+if (document.forms["frmName"]["textboxans"].value==ans){
+alert("That is how you do it");
+}
+else{
+alert("Sorry. That is wrong");
+}
+}
+</script>
+</head>
+<body>
+<form class="form" name="frmName" onsubmit="javascript:check()">
+Print "Hello World": <input type="text" name="textboxans">
+<input type="submit" value="Submit" >
+</form>
+</body>
+</html>
