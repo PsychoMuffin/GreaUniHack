@@ -1,23 +1,38 @@
 <!DOCTYPE html>
 <html>
 <head>
-<script>
-function check()
+<link rel="stylesheet" type="text/css" href="speechbubble.css">
+<script type="text/javascript">
+
+function enterInput()
 {
-var ans="System.out.println(\"Hello World\")";
-if (document.forms["frmName"]["textboxans"].value==ans){
-alert("That is how you do it");
+var inp=document.getElementById("textboxin").value;
+var ans="Hola";
+if (inp=="System.out.println(\"" + ans + "\");"){
+document.getElementById("bubble").classList.add("speech");
+document.getElementById("bubble").innerHTML = ans;
 }
 else{
 alert("Sorry. That is wrong");
+document.getElementById("bubble").classList.remove("speech");
+document.getElementById("bubble").innerHTML = "";
 }
 }
+
+function checkEnter() {
+    if(event.key === 'Enter') {
+        enterInput();
+    }
+}
+
 </script>
 </head>
 <body>
-<form class="form" name="frmName" onsubmit="javascript:check()">
-Print "Hello World": <input type="text" name="textboxans">
-<input type="submit" value="Submit" >
-</form>
+<p id="bubble"></p><br><br>
+
+Print "Hola": <input type="text" id="textboxin"
+             onkeydown="checkEnter()" size="40">
+<input type="button" value="Enter" onclick="enterInput()">
+
 </body>
 </html>
