@@ -73,6 +73,13 @@ input.stage
   cursor: pointer;
 }
 
+img#dragon
+{
+  width:500px;
+  position: absolute;
+  top: 100px;
+  right: 200px;
+}
 img#knightstage1
 {
   width: 150px;
@@ -97,6 +104,14 @@ img#knightstage3
 
 }
 img#knightstage4
+{
+  width: 150px;
+  position: absolute;
+  top: 400px;
+
+}
+
+img#knightstage5
 {
   width: 150px;
   position: absolute;
