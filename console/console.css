@@ -13,6 +13,17 @@ body {
   flex-direction: column;
 }
 
+.lake
+{
+  background-image: url("../images/lake.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 669px;
+  display: flex;
+  flex-direction: column;
+}
+
 .notCurrent
 {
   display: none;
@@ -63,6 +74,29 @@ input.stage
 }
 
 img#knightstage1
+{
+  width: 150px;
+  position: absolute;
+  top: 400px;
+
+}
+
+img#knightstage2
+{
+  width: 150px;
+  position: absolute;
+  top: 400px;
+
+}
+
+img#knightstage3
+{
+  width: 150px;
+  position: absolute;
+  top: 400px;
+
+}
+img#knightstage4
 {
   width: 150px;
   position: absolute;

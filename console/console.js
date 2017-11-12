@@ -24,6 +24,17 @@ function selectStage(stage)
     x[i].classList.remove("notCurrent");
   }
   currentStage = stage;
+  if (currentStage == 4)
+  {
+    document.getElementById("background").classList.remove("body");
+    document.getElementById("background").classList.add("lake");
+  }
+  else
+  {
+    document.getElementById("background").classList.remove("lake");
+    document.getElementById("background").classList.add("body");
+  }
+
 }
 
 function checkStage(i)
@@ -66,13 +77,27 @@ function checkStage(i)
           var inp=document.getElementById("consolein").value;
           if (inp=="takeStep();")
           {
-
+            takeStep();
           }
           else
           {
             alert("Sorry. That is wrong");
           }
           break;
+          case 4:
+            var inp=document.getElementById("consolein").value;
+            if (inp=="boolean isObstacle = true;")
+            {
+
+               jumpObstacle();
+
+            }
+            else
+            {
+              alert("Sorry. That is wrong");
+            }
+            break;
+
 
 
   }
@@ -82,5 +107,42 @@ function checkEnter() {
   if(event.key === 'Enter')
   {
     checkStage(currentStage);
+  }
+}
+
+function takeStep() {
+  var elem = document.getElementById("knightstage3");
+  var pos = 300;
+  var id = setInterval(frame, 5);
+  function frame() {
+    if (pos == 1000) {
+      clearInterval(id);
+    } else {
+      pos++;
+      elem.style.left = pos + 'px';
+    }
+  }
+}
+
+function jumpObstacle() {
+  var elem = document.getElementById("knightstage4");
+  var pos = 300;
+  var id = setInterval(frame, 5);
+  function frame() {
+    if (pos == 1000) {
+      clearInterval(id);
+    } else {
+      if (pos < 650)
+      {
+      pos++;
+      elem.style.left = pos + 'px';
+      elem.style.top = 700-pos + 'px';
+    }
+    else {
+      pos++;
+      elem.style.left = pos + 'px';
+      elem.style.top = -600 + pos + 'px';
+    }
+    }
   }
 }
