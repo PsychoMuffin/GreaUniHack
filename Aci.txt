@@ -1,0 +1,15 @@
+function hit()
+  {
+    var hits = 0;
+    var elem = document.getElementById("hit");
+    var id = setInterval(frame,1200);
+      function frame(){
+        if(hits == 10)
+        clearInterval(id);
+        else {
+          hits++;
+          document.getElementById("hit").innerHTML = hits;
+        }
+      }
+
+  }

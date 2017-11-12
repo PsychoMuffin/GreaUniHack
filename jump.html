@@ -18,15 +18,36 @@ body
   height: 200px;
   position: absolute;
 }
-
+#drogon
+{
+  float:right;
+}
 </style>
 </head>
+
 <body>
   <div id = 'container'>
     <div><img src="images/LittleKnight/png/Idle (1).png" id='animate'/></div>
   </div>
-  <button onclick="myMove()">Click me</button>
+  <img src = "level5/dragon.gif" id='drogon'>
+  <button onclick="hit()">Click me</button>
+  <div id="hit">HIT</div>
   <script>
+  function hit()
+  {
+    var hits = 0;
+    var elem = document.getElementById("hit");
+    var id = setInterval(frame,1200);
+      function frame(){
+        if(hits == 10)
+        clearInterval(id);
+        else {
+          hits++;
+          document.getElementById("hit").innerHTML = hits;
+        }
+      }
+      document.getElementById("hit").innerHTML = "Dead";
+  }
   function myMove() {
     var elem = document.getElementById("animate");
     var pos = 0;

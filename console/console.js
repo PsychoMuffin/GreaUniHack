@@ -1,5 +1,15 @@
 var currentStage = 1;
-
+function myMove() {
+  var elem = document.getElementById("knightstage1");
+  var pos = 0;
+  var id = setInterval(frame, 5);
+  function frame() {
+    if (pos == 500) {
+      clearInterval(id);
+    } else {
+      pos++;
+      elem.style.left = pos + 'px';
+    }}}
 function disableStages()
 {
   for (var index = 1; index <= 6; index++)
@@ -66,7 +76,7 @@ function checkStage(i)
           var inp=document.getElementById("consolein").value;
           if (inp=="takeStep();")
           {
-
+            myMove();
           }
           else
           {

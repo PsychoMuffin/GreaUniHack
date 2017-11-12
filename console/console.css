@@ -237,3 +237,9 @@ p.thought:after
 .wrapper {
     align-items:  center;
 }
+
+#knightstage1{
+  width: 200px;
+  height: 200px;
+  position: absolute;
+}
