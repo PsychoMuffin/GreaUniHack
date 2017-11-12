@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+}
+</style>
+</head>
+<body>
+<img id ="imageOne" src ="integer.png" />
+<button id="clickme" onclick = "changeColor()">Submit</button>
+
+        <script>
+            var image =  document.getElementById("imageOne");
+
+            function changeColor()
+            {
+                if (image.getAttribute('src') == "integer.png")
+                {
+                    image.src = "string.png";
+                }
+                else
+                {
+                    image.src = "boolean.png";
+                }
+            }
+        </script>
+
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+</style>
+</head>
+<body>
+
+
+<script>
+    var heart = [];
+    function setup(){
+        for(var i = 0; i<=4; i++){
+            heart[i] = new Image(5,5);
+            heart[i].src = 'heart.png';
+            document.body.appendChild(heart[i]);
+            if(i < 4)
+            heart[i].display = function(){
+                //pozitii
+            }
+        }  
+    }
+    function do(knityJumped){
+        var counter = 0;
+        var ok = 0;
+
+        while(counter < 4){
+            if(Boolean(knityJumped)){
+                heart.push();
+                ok = 1;
+                break;
+            }
+            else{
+                heart.splice(0,1);
+                verify(knityJumped);
+            }
+            counter++;
+        }
+        if(Boolean(ok))
+            unlock(); //print tab-uri
+        else
+            reset(); //la pagina
+    }
+    function verify(knityJumped){
+        //client to server
+    }
+</script>
+
+
+</body>
+</html>
