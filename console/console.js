@@ -111,6 +111,20 @@ function checkStage(i)
               alert("Sorry. That is wrong");
             }
             break;
+            case 5:
+              var inp=document.getElementById("consolein").value;
+                if (inp=="javac SlayDragon.java && java SlayDragon")
+              {
+
+                 jumpObstacle();
+
+
+              }
+              else
+              {
+                alert("Sorry. That is wrong");
+              }
+              break;
 
 
 
