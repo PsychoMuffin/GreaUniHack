@@ -1,3 +1,40 @@
+<!DOCTYPE html>
 <html>
-
+<head>
+</head>
+  <script type="text/javascript">
+    function function1()
+    {
+      x=0;
+    var walk = new Array();
+    walk[0] = "images\\LittleKnight\\png\\Idle (1).png";
+    walk[1] = "images\\LittleKnight\\png\\Walk (1).png";
+    walk[2] = "images\\LittleKnight\\png\\Walk (2).png";
+    walk[3] = "images\\LittleKnight\\png\\Walk (3).png"
+    walk[4] = "images\\LittleKnight\\png\\Walk (4).png"
+        document.getElementById('ad').src = walk[x];
+        document.getElementById('imgsrc').innerHTML = "<h1>" + walk[x] + "</h1>";
+        if (x < 4) {
+          x += 1;
+        } else {
+          x = 0;
+        }
+  }
+    function function2()
+    {
+      var steps = parseInt(document.getElementById("steps").value);
+      document.getElementById('text').innerHTML = steps;
+      i=1;
+      while(i<steps*5)
+      {setInterval(function1,1000);
+      i++;}
+    }
+  </script>
+<body>
+  <img id="ad" src="images\LittleKnight\png\Idle (1).png" />
+    <div id="imgsrc"><h1>img.gif</h1></div>
+  <input type="text" id="steps">
+  <button onclick="function2()">dseaa</button>
+  <div id="text">smth</div>
+</body>
 </html>
