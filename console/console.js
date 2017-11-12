@@ -59,9 +59,20 @@ function checkStage(i)
         {
           alert("Sorry. That is wrong");
           document.getElementById("thought").classList.remove("speech");
-          document.getElementById("thought").innerHTML = "";  
+          document.getElementById("thought").innerHTML = "";
         }
         break;
+        case 3:
+          var inp=document.getElementById("consolein").value;
+          if (inp=="takeStep();")
+          {
+
+          }
+          else
+          {
+            alert("Sorry. That is wrong");
+          }
+          break;
 
 
   }
