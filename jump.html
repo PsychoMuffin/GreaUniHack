@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<head>
+
+<style>
+body
+{
+  background:url("images/background.png");
+  background-size: cover;
+}
+
+#container {
+  width: 1000px;
+  height: 400px;
+  position: relative;
+}
+#animate {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+}
+
+</style>
+</head>
+<body>
+  <div id = 'container'>
+    <div><img src="images/LittleKnight/png/Idle (1).png" id='animate'/></div>
+  </div>
+  <button onclick="myMove()">Click me</button>
+  <script>
+  function myMove() {
+    var elem = document.getElementById("animate");
+    var pos = 0;
+    var id = setInterval(frame, 5);
+    function frame() {
+      if (pos == 500) {
+        clearInterval(id);
+      } else {
+        pos++;
+        elem.style.left = pos + 'px';
+      }
+    }
+  }
+  </script>
+
+</body>
+</html>
