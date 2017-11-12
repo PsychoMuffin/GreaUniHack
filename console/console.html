@@ -1,38 +1,76 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet" type="text/css" href="speechbubble.css">
-<script type="text/javascript">
-
-function enterInput()
-{
-var inp=document.getElementById("textboxin").value;
-var ans="Hola";
-if (inp=="System.out.println(\"" + ans + "\");"){
-document.getElementById("bubble").classList.add("speech");
-document.getElementById("bubble").innerHTML = ans;
-}
-else{
-alert("Sorry. That is wrong");
-document.getElementById("bubble").classList.remove("speech");
-document.getElementById("bubble").innerHTML = "";
-}
-}
-
-function checkEnter() {
-    if(event.key === 'Enter') {
-        enterInput();
-    }
-}
-
-</script>
+<link rel="stylesheet" type="text/css" href="console.css">
+<script type="text/javascript" src="console.js"></script>
 </head>
-<body>
-<p id="bubble"></p><br><br>
 
-Print "Hola": <input type="text" id="textboxin"
-             onkeydown="checkEnter()" size="40">
-<input type="button" value="Enter" onclick="enterInput()">
+<body>
+
+
+<!-- stages -->
+
+<div class="stage1">
+<p id="bubble"></p><br><br>
+</div>
+
+<div class="stage2">
+  <p> This is stage 2 </p>
+</div>
+
+<div class="stage3">
+  <p> This is stage 3 </p>
+</div>
+
+<div class="stage4">
+  <p> This is stage 4 </p>
+</div>
+
+<div class="stage5">
+  <p> This is stage 5 </p>
+</div>
+
+<div class="stage6">
+  <p> This is stage 6 </p>
+</div>
+
+
+<!-- stage select -->
+
+<span class="container1" id="stageselect">
+  <input type="button" class= "stage" id="selectstage1"
+         onclick="selectStage(1)" value=1>
+  <input type="button" class= "stage" id="selectstage2"
+         onclick="selectStage(2)" value=2>
+  <input type="button" class= "stage" id="selectstage3"
+         onclick="selectStage(3)" value=3>
+  <input type="button" class= "stage" id="selectstage4"
+         onclick="selectStage(4)" value=4>
+  <input type="button" class= "stage" id="selectstage5"
+         onclick="selectStage(5)" value=5>
+  <input type="button" class= "stage" id="selectstage6"
+         onclick="selectStage(6)" value=6>
+
+
+<!-- console -->
+
+<span class="container2">
+  <span class="stage1"> Print "Hello World": </span>
+  <span class="stage2"> Stage 2: </span>
+  <span class="stage3"> Stage 3: </span>
+  <span class="stage4"> Stage 4: </span>
+  <span class="stage5"> Stage 5: </span>
+  <span class="stage6"> Stage 6: </span>
+  <input type="text" id="consolein" onkeydown="checkEnter()" size="40">
+</span> <!-- container2 -->
+
+</span> <!-- container1 -->
+
+<!-- start game -->
+
+<script> selectStage(1); </script>
+
+
 
 </body>
 </html>

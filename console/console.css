@@ -1,7 +1,39 @@
-p#bubble {
+.notCurrent
+{
+  display: none;
+}
+
+.container1
+{
+  display: flex;
+  flex-direction: row;
+}
+
+.container2
+{
+  display: flex;
+  flex-direction: column;
+}
+
+input.stage
+{
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+p#bubble
+{
   font-size: 20px;
 }
-p.speech {
+p.speech
+{
   position: relative;
   width: 200px;
   height: 100px;
@@ -17,7 +49,8 @@ p.speech {
   box-shadow: 2px 2px 4px #888;
 }
 
-p.speech:before {
+p.speech:before
+{
   content: ' ';
   position: absolute;
   width: 0;
@@ -28,7 +61,8 @@ p.speech:before {
   border-color: #666 transparent transparent #666;
 }
 
-p.speech:after {
+p.speech:after
+{
   content: ' ';
   position: absolute;
   width: 0;
@@ -39,7 +73,8 @@ p.speech:after {
   border-color: #fff transparent transparent #fff;
 }
 
-p.thought {
+p.thought
+{
   position: relative;
   width: 130px;
   height: 100px;
@@ -55,7 +90,8 @@ p.thought {
   box-shadow: 2px 2px 4px #888;
 }
 
-p.thought:before, p.thought:after {
+p.thought:before, p.thought:after
+{
   left: 10px;
   top: 70px;
   width: 40px;
@@ -67,7 +103,8 @@ p.thought:before, p.thought:after {
   border-radius: 28px;
 }
 
-p.thought:after {
+p.thought:after
+{
   width: 20px;
   height: 20px;
   left: 5px;
