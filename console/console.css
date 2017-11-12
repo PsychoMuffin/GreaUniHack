@@ -4,6 +4,7 @@
   border:1px solid black;
   height: 640px;
   display: flex;
+  flex-direction: column;
 }
 
 .notCurrent
@@ -15,11 +16,20 @@
 {
   margin-top: auto;
 }
+
+.stages
+{
+  display: flex;
+  margin-top: 250px;
+  margin-left: 250px;
+
+}
+
 .container1
 {
   display: flex;
   flex-direction: row;
-  justify-content: spac e-between;
+  justify-content: space-between;
   padding: 1vh 2vw;
 }
 

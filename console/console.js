@@ -25,7 +25,7 @@ function selectStage(stage)
 function enterInput()
 {
   var inp=document.getElementById("consolein").value;
-  var ans="Hello World";
+  var ans="Hello World!";
   if (inp=="System.out.println(\"" + ans + "\");")
   {
     document.getElementById("bubble").classList.add("speech");
