@@ -1,6 +1,6 @@
 var currentStage = 1;
 function myMove() {
-  var elem = document.getElementById("knightstage1");
+  var elem = document.getElementById("knightstage"+currentStage);
   var pos = 0;
   var id = setInterval(frame, 5);
   function frame() {
@@ -56,7 +56,7 @@ function checkStage(i)
       var ans="Hello!";
 
 
-      if (inp=="System.out.println(\"" + ans + "\");")
+      if (inp=="System.out.print(\"" + ans + "\");")
       {
         document.getElementById("bubble").classList.add("speech");
         document.getElementById("bubble").innerHTML = ans;
@@ -85,13 +85,12 @@ function checkStage(i)
         break;
         case 3:
           var inp=document.getElementById("consolein").value;
-          if (inp=="takeStep();")
+          if (inp=="walk();")
           {
-<<<<<<< HEAD
-            myMove();
-=======
-            takeStep();
->>>>>>> 38bfe6ff3aeba1ea7a69273007fa3a2cbfab30aa
+
+
+            walk();
+
           }
           else
           {
@@ -103,7 +102,7 @@ function checkStage(i)
             if (inp=="boolean isObstacle = true;")
             {
 
-               jumpObstacle();
+               jumpObstacle(currentStage);
 
             }
             else
@@ -116,7 +115,9 @@ function checkStage(i)
                 if (inp=="javac SlayDragon.java && java SlayDragon")
               {
 
-                 jumpObstacle();
+                 jumpObstacle(currentStage);
+                 hit();
+
 
 
               }
@@ -138,7 +139,7 @@ function checkEnter() {
   }
 }
 
-function takeStep() {
+function walk() {
   var elem = document.getElementById("knightstage3");
   var pos = 300;
   var id = setInterval(frame, 5);
@@ -152,8 +153,27 @@ function takeStep() {
   }
 }
 
-function jumpObstacle() {
-  var elem = document.getElementById("knightstage4");
+function hit()
+  {
+    var hits = 0;
+    var elem = document.getElementById("hit");
+    var id = setInterval(frame,1200);
+      function frame(){
+        if(hits == 6)
+        {
+          clearInterval(id);
+          selectStage(6);
+        }
+        else {
+          hits++;
+
+        }
+      }
+
+  }
+
+function jumpObstacle(currentStage) {
+  var elem = document.getElementById("knightstage" + currentStage);
   var pos = 300;
   var id = setInterval(frame, 5);
   function frame() {
